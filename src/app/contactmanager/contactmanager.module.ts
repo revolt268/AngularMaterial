@@ -10,11 +10,14 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MaterialModule } from '../shared/material.module';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { UserService } from './services/user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
   { path: '', component: ContactmanagerAppComponent,
     children: [
+      { path: ':id', component: MainContentComponent },
       { path: '', component: MainContentComponent }
     ]
   },
@@ -28,8 +31,12 @@ const routes: Routes = [
     MainContentComponent,
     ToolbarComponent
   ],
+  providers: [
+    UserService
+  ],
   imports: [
     CommonModule,
+    HttpClientModule,
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
