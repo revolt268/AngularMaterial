@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { UserService } from './services/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import { NotesComponent } from './components/notes/notes.component';
 
 
 const routes: Routes = [
@@ -29,7 +30,8 @@ const routes: Routes = [
     ContactmanagerAppComponent,
     SidenavComponent,
     MainContentComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    NotesComponent
   ],
   providers: [
     UserService
