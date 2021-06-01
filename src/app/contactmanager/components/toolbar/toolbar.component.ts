@@ -14,6 +14,7 @@ export class ToolbarComponent implements OnInit {
 
   @Output() toggleSidenav = new EventEmitter<void>();
   @Output() toggleTheme = new EventEmitter<void>();
+  @Output() toggleDir = new EventEmitter<void>();
 
   constructor(private dialog: MatDialog,
               private _snackBar: MatSnackBar,
