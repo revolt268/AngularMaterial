@@ -11,7 +11,7 @@
         </h2>
       </mat-card-title>
       <mat-card-subtitle>
-        Birthday is not appearing!!!{{ user.birthDay }}
+        Birthday is not appearing!!!{{ user.birthDay | date: 'yyyy-MM-dd'}}
       </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
