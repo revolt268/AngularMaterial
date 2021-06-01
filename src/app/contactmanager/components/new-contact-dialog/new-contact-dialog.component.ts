@@ -27,6 +27,7 @@ export class NewContactDialogComponent implements OnInit {
   }
 
   save() {
+    this.user.name = this.name.value;
     this.dialogRef.close(this.user);
   }
 
